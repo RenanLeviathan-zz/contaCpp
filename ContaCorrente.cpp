@@ -10,21 +10,20 @@ ContaCorrente::~ContaCorrente(){
 	
 }
 
-inline void ContaCorrente::depositar(double valor){
+void ContaCorrente::depositar(double valor){
 	Transacao t("11/02/2017",getSaldo()+valor,"lorem ipsum");
-			addTransacoes(t);
+			addTransacoes(&t);
 			setSaldo(getSaldo()+valor);
 }
-
-inline void ContaCorrente::retirar(double valor){
+void ContaCorrente::retirar(double valor){
 	if(getSaldo()-valor>0){
-				Transacao t("11/02/2017",getSaldo()+valor,"lorem ipsum");
-				addTransacoes(t);
+				Transacao t("11/02/2017",getSaldo()-valor,"lorem ipsum");
+				addTransacoes(&t);
 				setSaldo(getSaldo()-valor);
 			}
 }
 
-inline void ContaCorrente::imprimirExtrato(){
+void ContaCorrente::imprimirExtrato(){
 	cout<<"Correntista: "<<getCorrentista()<<endl;
 			cout<<"Numero: "<<getNumero()<<endl;
 			cout<<"Extrato: Data"<<endl;

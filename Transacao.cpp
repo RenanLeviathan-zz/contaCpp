@@ -11,13 +11,13 @@ Transacao::~Transacao(){
 	
 }
 
-inline string Transacao::getData(){
+string Transacao::getData(){
 	return data;
 }
-inline double Transacao::getValor(){
+double Transacao::getValor(){
 	return valor;
 }
 
-inline string Transacao::getDesc(){
+string Transacao::getDesc(){
 	return desc;
 }

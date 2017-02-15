@@ -1,6 +1,8 @@
 #include "Conta.h"
 #include "Transacao.h"
+#include <iostream>
 #include <vector>
+using namespace std;
 Conta::Conta(int numero, string correntista, double saldo){
 	this->numero=numero;
 	this->correntista=correntista;
